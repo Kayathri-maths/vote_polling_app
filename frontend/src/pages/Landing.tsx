@@ -82,14 +82,11 @@ export default function Landing() {
               >
                 Create Poll
               </Link>
-              <button className="px-6 py-3 bg-white text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-md border border-gray-200">
-                View Examples
-              </button>
             </div>
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                 <svg
@@ -136,48 +133,6 @@ export default function Landing() {
               <p className="text-sm text-gray-600">
                 Watch responses pour in with beautiful real-time visualizations.
               </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
-                <svg
-                  className="w-5 h-5 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-base font-bold text-gray-900 mb-1.5">
-                Easy Sharing
-              </h3>
-              <p className="text-sm text-gray-600">
-                Share your polls instantly with a simple link or embed code.
-              </p>
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <div className="text-3xl font-bold mb-1">10K+</div>
-                <div className="text-sm text-blue-100">Active Polls</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-1">100K+</div>
-                <div className="text-sm text-blue-100">Total Votes Cast</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-1">5K+</div>
-                <div className="text-sm text-blue-100">Happy Users</div>
-              </div>
             </div>
           </div>
         </div>
