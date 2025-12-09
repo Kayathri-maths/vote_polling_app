@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const { Server } = require("socket.io");
 const io = new Server(server, {
-  cors: { origin: process.env.CLIENT_ORIGIN || "http://localhost:5175" },
+  cors: { origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" },
 });
 
 // attach io to req in middleware
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5175" }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);

@@ -5,11 +5,13 @@ const generateToken = require("../utils/generateToken");
 
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
+  console.log("name, email", name, email, password);
   try {
     let user = await User.findOne({ email });
     if (user) return res.status(400).json({ message: "Email already in use" });
     const hashed = await bcrypt.hash(password, 10);
     user = new User({ name, email, password: hashed });
+    console.log("user", user);
     await user.save();
 
     res.json({

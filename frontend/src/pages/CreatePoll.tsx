@@ -72,7 +72,7 @@ export default function CreatePoll() {
             </svg>
             Back to Dashboard
           </button>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
             Create New Poll
           </h1>
           <p className="text-gray-600">
@@ -124,7 +124,7 @@ export default function CreatePoll() {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-900">
+                  <h2 className="text-lg font-semibold text-gray-900">
                     Poll Question
                   </h2>
                 </div>
@@ -133,7 +133,7 @@ export default function CreatePoll() {
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="What would you like to ask? Make it clear and engaging..."
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none text-lg"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none text-sm"
                 />
                 <p className="mt-2 text-sm text-gray-500">
                   Keep it concise and easy to understand
@@ -159,7 +159,7 @@ export default function CreatePoll() {
                         />
                       </svg>
                     </div>
-                    <h2 className="text-xl font-semibold text-gray-900">
+                    <h2 className="text-lg font-semibold text-gray-900">
                       Answer Options
                     </h2>
                   </div>
@@ -178,7 +178,7 @@ export default function CreatePoll() {
                         value={opt}
                         onChange={(e) => updateOption(i, e.target.value)}
                         placeholder={`Option ${i + 1}`}
-                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-sm"
                       />
                       {options.length > 2 && (
                         <button
@@ -208,7 +208,7 @@ export default function CreatePoll() {
                 <button
                   type="button"
                   onClick={addOption}
-                  className="mt-4 flex items-center px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
+                  className="mt-4 flex items-center px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium text-sm"
                 >
                   <svg
                     className="w-5 h-5 mr-2"
@@ -264,7 +264,7 @@ export default function CreatePoll() {
                           className="flex items-center p-2 bg-gray-50 rounded"
                         >
                           <div className="w-4 h-4 border-2 border-gray-300 rounded-full mr-3"></div>
-                          <span className="text-gray-700">{opt}</span>
+                          <span className="text-gray-700 text-sm">{opt}</span>
                         </div>
                       ))}
                   </div>

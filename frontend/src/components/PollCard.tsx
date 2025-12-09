@@ -7,6 +7,7 @@ type Poll = {
   options: Option[];
   createdAt?: string;
 };
+
 export default function PollCard({
   poll,
   onVote,
@@ -43,14 +44,14 @@ export default function PollCard({
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="font-semibold text-lg text-gray-900 flex-1">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow">
+      <div className="flex items-start justify-between mb-3">
+        <h3 className="font-semibold text-base text-gray-900 flex-1">
           {poll.question}
         </h3>
-        <div className="flex items-center text-sm text-gray-500 ml-4">
+        <div className="flex items-center text-xs text-gray-500 ml-3">
           <svg
-            className="w-4 h-4 mr-1"
+            className="w-3.5 h-3.5 mr-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -66,7 +67,7 @@ export default function PollCard({
         </div>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-2">
         {poll.options.map((opt: Option, idx: number) => {
           const percentage = totalVotes
             ? Math.round((opt.votes / totalVotes) * 100)
@@ -75,16 +76,16 @@ export default function PollCard({
 
           return (
             <div key={idx} className="group">
-              <div className="flex items-center justify-between mb-1.5">
-                <span className="text-sm font-medium text-gray-700">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-medium text-gray-700">
                   {opt.text}
                 </span>
-                <span className="text-sm text-gray-500">{percentage}%</span>
+                <span className="text-xs text-gray-500">{percentage}%</span>
               </div>
 
               <div className="relative">
                 {/* Progress bar background */}
-                <div className="h-10 bg-gray-100 rounded-lg overflow-hidden">
+                <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
                   {/* Progress bar fill */}
                   <div
                     className={`h-full ${getBarColor(
@@ -99,18 +100,18 @@ export default function PollCard({
                   <button
                     onClick={() => handleVote(idx)}
                     disabled={voting}
-                    className={`absolute inset-0 flex items-center justify-between px-4 rounded-lg transition-all ${
+                    className={`absolute inset-0 flex items-center justify-between px-3 rounded-lg transition-all ${
                       isSelected
                         ? "bg-blue-500/20 border-2 border-blue-500"
                         : "hover:bg-white/90 border-2 border-transparent hover:border-blue-300"
                     } disabled:cursor-not-allowed`}
                   >
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-xs font-medium text-gray-700">
                       {opt.votes} {opt.votes === 1 ? "vote" : "votes"}
                     </span>
                     {voting && isSelected ? (
                       <svg
-                        className="animate-spin h-5 w-5 text-blue-600"
+                        className="animate-spin h-4 w-4 text-blue-600"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
@@ -130,7 +131,7 @@ export default function PollCard({
                       </svg>
                     ) : (
                       <svg
-                        className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors"
+                        className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

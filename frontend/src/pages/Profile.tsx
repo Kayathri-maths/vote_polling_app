@@ -92,9 +92,6 @@ export default function Profile() {
                   </p>
                 </div>
               </div>
-              <button className="mt-4 md:mt-0 px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium">
-                Edit Profile
-              </button>
             </div>
           </div>
         </div>
